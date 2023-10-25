@@ -1,0 +1,13 @@
+name: lint
+
+on: push
+
+jobs:
+  super-lint:
+    name: lint codebase
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout branch
+        uses: actions/checkout@v2
+      - name: install package
+        run: npm install
