@@ -4,10 +4,12 @@ on: push
 
 jobs:
   super-lint:
-    name: lint codebase
+    name: Basic checks
     runs-on: ubuntu-latest
     steps:
       - name: checkout branch
         uses: actions/checkout@v2
       - name: install package
         run: npm install
+      - name: Check lints
+        run: npm run lint
